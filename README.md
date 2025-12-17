@@ -1,35 +1,62 @@
 # Tech Expert System
 
-This project is a mini expert system for troubleshooting common computer problems. It's built with Python and demonstrates both forward and backward chaining inference methods.
+This project is a simple expert system for troubleshooting common computer problems. It's built with Python and uses a forward-chaining inference engine to deduce solutions from a set of given symptoms. The user interface is a web application powered by Streamlit.
 
 ## Features
 
-*   **Knowledge Base:** Stores facts and rules for troubleshooting.
-*   **Inference Engine:** Can reason about the knowledge base using:
-    *   Forward Chaining: To deduce new facts from existing ones.
-    *   Backward Chaining: To find the cause of a specific problem.
-*   **Conflict Resolution:** Implements a strategy to handle conflicting rules.
-*   **CLI:** A simple command-line interface to interact with the system.
+*   **Knowledge Base:** Stores facts and rules for troubleshooting computer issues.
+*   **Inference Engine:** Reasons about the knowledge base using forward chaining to deduce new facts.
+*   **Conflict Resolution:** Implements a priority-based strategy to handle conflicting rules.
+*   **Web UI:** A simple and interactive web interface built with Streamlit to guide users through the troubleshooting process.
 
 ## Getting Started
 
-1.  **Clone the repository:**
+### Prerequisites
+
+*   Python 3.7+
+*   pip
+
+### Installation and Running the Application
+
+1.  **Navigate to the project's `main` directory:**
     ```bash
-    git clone https://github.com/your-username/tech-expert-system.git
+    cd src/main
     ```
-2.  **Navigate to the project directory:**
+
+2.  **Install the dependencies:**
     ```bash
-    cd tech-expert-system
+    pip install -r requirements.txt
     ```
+
 3.  **Run the expert system:**
     ```bash
-    python src/main/main.py
+    streamlit run main.py
     ```
+This will start the Streamlit web application in your browser.
 
 ## Testing
 
-To run the test suite, use the following command:
+To run the test suite, navigate to the project's root directory and use the following command:
 
 ```bash
 python -m unittest discover src/tests
+```
+
+## Project Structure
+
+```
+.
+├── src
+│   ├── main
+│   │   ├── __init__.py
+│   │   ├── inference_engine.py   # Core logic for the inference engine (forward/backward chaining)
+│   │   ├── knowledge_base.py     # Manages the facts and rules
+│   │   ├── main.py               # Main application file with the Streamlit UI
+│   │   ├── requirements.txt      # Project dependencies
+│   │   └── rule.py               # Defines the structure of a rule
+│   └── tests
+│       ├── __init__.py
+│       └── test_expert_system.py # Unit tests for the expert system
+├── .gitignore
+└── README.md
 ```
