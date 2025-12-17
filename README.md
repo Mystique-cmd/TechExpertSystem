@@ -2,6 +2,9 @@
 
 This project is a simple expert system for troubleshooting common computer problems. It's built with Python and uses a forward-chaining inference engine to deduce solutions from a set of given symptoms. The user interface is a web application powered by Streamlit.
 
+## Link 
+[https://techexpertsystem-qhjscuz5uf8rsikrvgq59n.streamlit.app/]
+
 ## Features
 
 *   **Knowledge Base:** Stores facts and rules for troubleshooting computer issues.
